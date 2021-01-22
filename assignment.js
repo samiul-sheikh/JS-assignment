@@ -72,3 +72,20 @@ function megaFriend(myFriend) {
 }
 var friends = megaFriend(['Samiul', 'Chaity', 'nadim', 'ayon']);
 console.log(friends);
+
+
+
+// solution to the bonus part applying validation in problem 2:
+
+function budgetCalculator(watch, phone, laptop) {
+    var watchPrice = watch * 50;
+    var phonePrice = phone * 100;
+    var laptopPrice = laptop * 500;
+    var totalPrice = watchPrice + phonePrice + laptopPrice;
+    if (watch < 0 || phone < 0 || laptop < 0){
+        return 'quantity not be empty';
+    }
+    return totalPrice;
+}
+var totalBudget = budgetCalculator(-1, -2, -3)
+console.log(totalBudget);
