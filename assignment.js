@@ -8,10 +8,13 @@
 
 function kilometerToMeter(kilometer) {
     var meter = kilometer * 1000;
+    if (kilometer == null) {
+        return "value not be empty!"
+    }
     return meter;
 }
 
-var result = kilometerToMeter(5);
+var result = kilometerToMeter();
 console.log(result);
 
 // another way with declare a variable
@@ -92,7 +95,7 @@ function budgetCalculator(watch, phone, laptop) {
     var phonePrice = phone * 100;
     var laptopPrice = laptop * 500;
     var totalPrice = watchPrice + phonePrice + laptopPrice;
-    if (watch < 0 || phone < 0 || laptop < 0){
+    if (watch < 0 || phone < 0 || laptop < 0) {
         return 'quantity not be empty';
     }
     return totalPrice;
