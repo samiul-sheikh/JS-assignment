@@ -9,7 +9,7 @@
 function kilometerToMeter(kilometer) {
     var meter = kilometer * 1000;
     if (kilometer == null) {
-        return "value not be empty!"
+        return "value not be empty!";
     }
     return meter;
 }
@@ -32,9 +32,13 @@ function budgetCalculator(watch, phone, laptop) {
     var phonePrice = phone * 100;
     var laptopPrice = laptop * 500;
     var totalPrice = watchPrice + phonePrice + laptopPrice;
+    if (watch < 0 || phone < 0 || laptop < 0) {
+        return 'quantity not be empty!';
+    }
     return totalPrice;
 }
-var totalBudget = budgetCalculator(5, 5, 5)
+var totalBudget = budgetCalculator(5, 5, 5);
+// var totalBudget = budgetCalculator(-1, -2, -3);
 console.log(totalBudget);
 
 
@@ -43,8 +47,11 @@ console.log(totalBudget);
 // takes one parameter and return the total cost according to parameter using hotelCost function
 
 function hotelCost(day) {
-    var day = 25;
     var cost = 0;
+    if(day == null || day < 0) {
+        return "please enter how many days you want to stay!"
+    }
+
     if (day <= 10) {
         cost = day * 100;
     }
@@ -65,6 +72,7 @@ function hotelCost(day) {
 }
 
 var totalCost = hotelCost(22);
+// var totalCost = hotelCost();
 console.log(totalCost);
 
 
@@ -74,6 +82,9 @@ console.log(totalCost);
 
 function megaFriend(myFriend) {
     var largestName = "";
+    if (myFriend.length <= 0) {
+        return "Length not be empty!";
+    }
     for (var i = 0; i < myFriend.length; i++) {
         if (largestName.length < myFriend[i].length) {
             largestName = myFriend[i];
@@ -82,23 +93,5 @@ function megaFriend(myFriend) {
     return largestName;
 }
 var friends = megaFriend(['Samiul', 'Chaity', 'nadim', 'ayon']);
+// var friends = megaFriend([]);
 console.log(friends);
-
-
-
-// solution to the bonus part:
-// applying validation in problem 2:
-// when take negative values in parameter return different & when take positive values return sucessfully!
-
-function budgetCalculator(watch, phone, laptop) {
-    var watchPrice = watch * 50;
-    var phonePrice = phone * 100;
-    var laptopPrice = laptop * 500;
-    var totalPrice = watchPrice + phonePrice + laptopPrice;
-    if (watch < 0 || phone < 0 || laptop < 0) {
-        return 'quantity not be empty';
-    }
-    return totalPrice;
-}
-var totalBudget = budgetCalculator(-1, -2, -3)
-console.log(totalBudget);
