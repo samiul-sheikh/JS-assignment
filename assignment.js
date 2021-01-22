@@ -1,4 +1,9 @@
+// Github Repository:
+// https://github.com/samiul-sheikh/JS-assignment
+
+
 // solution to the problem no 1:
+// Convet Kilometer into Meter using kilometerToMeter function
 // 1000 meter = 1 kilometer;
 
 function kilometerToMeter(kilometer) {
@@ -17,6 +22,7 @@ console.log(km);
 
 
 // solution to the problem no 2:
+// takes 3 input parameter and return total budget using budgetCalculator function
 
 function budgetCalculator(watch, phone, laptop) {
     var watchPrice = watch * 50;
@@ -31,6 +37,7 @@ console.log(totalBudget);
 
 
 // solution to the problem no 3:
+// takes one parameter and return the total cost according to parameter using hotelCost function
 
 function hotelCost(day) {
     var day = 25;
@@ -60,6 +67,7 @@ console.log(totalCost);
 
 
 // solution to the problem no 4:
+// recives an array string as input and return the maximum length element using megaFriend function
 
 function megaFriend(myFriend) {
     var largestName = "";
@@ -75,7 +83,9 @@ console.log(friends);
 
 
 
-// solution to the bonus part applying validation in problem 2:
+// solution to the bonus part:
+// applying validation in problem 2:
+// when take negative values in parameter return different & when take positive values return sucessfully!
 
 function budgetCalculator(watch, phone, laptop) {
     var watchPrice = watch * 50;
