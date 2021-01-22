@@ -27,3 +27,32 @@ function budgetCalculator(watch, phone, laptop) {
 }
 var totalBudget = budgetCalculator(5, 5, 5)
 console.log(totalBudget);
+
+
+
+// solution to the problem no 3:
+
+function hotelCost(day) {
+    var day = 25;
+    var cost = 0;
+    if (day <= 10) {
+        cost = day * 100;
+    }
+    else if (day <= 20) {
+        var firstStayDays = 10 * 100;
+        var remainingDays = day - 10;
+        var secondStayDays = remainingDays * 80;
+        cost = firstStayDays + secondStayDays;
+    }
+    else {
+        var firstStayDays = 10 * 100;
+        var secondStayDays = 10 * 80;
+        var remainingDays = day - 20;
+        var thirdStayDays = remainingDays * 50;
+        cost = firstStayDays + secondStayDays + thirdStayDays;
+    }
+    return cost;
+}
+
+var totalCost = hotelCost(22);
+console.log(totalCost);
