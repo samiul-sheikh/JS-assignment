@@ -13,3 +13,17 @@ console.log(result);
 var input = 10;
 var km = kilometerToMeter(input);
 console.log(km);
+
+
+
+// solution to the problem no 2:
+
+function budgetCalculator(watch, phone, laptop) {
+    var watchPrice = watch * 50;
+    var phonePrice = phone * 100;
+    var laptopPrice = laptop * 500;
+    var totalPrice = watchPrice + phonePrice + laptopPrice;
+    return totalPrice;
+}
+var totalBudget = budgetCalculator(5, 5, 5)
+console.log(totalBudget);
