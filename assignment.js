@@ -56,3 +56,19 @@ function hotelCost(day) {
 
 var totalCost = hotelCost(22);
 console.log(totalCost);
+
+
+
+// solution to the problem no 4:
+
+function megaFriend(myFriend) {
+    var largestName = "";
+    for (var i = 0; i < myFriend.length; i++) {
+        if (largestName.length < myFriend[i].length) {
+            largestName = myFriend[i];
+        }
+    }
+    return largestName;
+}
+var friends = megaFriend(['Samiul', 'Chaity', 'nadim', 'ayon']);
+console.log(friends);
